@@ -13,7 +13,7 @@ async function getAddressByCep () {
             city = data.localidade;
 
             try {
-                const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=66a27daffc724065aad215334232912&q=${city}&days=5&aqi=no&alerts=yes`);
+                const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=66a27daffc724065aad215334232912&q=${city}&days=5&aqi=no&alerts=no`);
                 const data = await response.json();
                 document.getElementById("card").removeAttribute("style");
                 document.getElementById("result").innerHTML = "";
